@@ -8,6 +8,15 @@ string longestCommonPrefix(vector<string> &strs) {
   if (strs.size()==0) return "";
   if (strs.size()==1) return strs[0];
 
+  // sort vector for better performance.
+  struct {
+    bool operator()(string a, string b) const
+    {
+      return a.size() < b.size();
+    }
+  } customLess;
+  sort(strs.begin(), strs.end(), customLess);
+
   string common = "";
   string pattern = "";
   string content = "";
