@@ -1,27 +1,27 @@
 //
 // Created by Marston Yu on 2019-02-07.
 //
-#include "PrintLibrary.h"
 #include <iostream>
+#include "LongestPrefix.h"
 
 string longestCommonPrefix(vector<string> &strs) {
-  if (strs.size()==0) return "";
+  if (strs.empty()) return "";
   if (strs.size()==1) return strs[0];
 
   // find the string with minimum length
   string ms = strs[0];
-  for (int i = 0; i < strs.size(); i++) {
-    if (ms.length() > strs[i].length()) {
-      ms = strs[i];
+  for (auto &str : strs) {
+    if (ms.length() > str.length()) {
+      ms = str;
     }
   }
 
   // vertical scanning. Increasing array index and compare chars in same position.
   for (int i = 0; i < ms.length(); i++) {
 
-    for (int j = 0; j < strs.size(); j++) {
+    for (auto &str : strs) {
       // When two chars not matching, string before the unmatched chars is the longest common prefix.
-      if (ms[i]!=strs[j][i]) {
+      if (ms[i]!=str[i]) {
         return ms.substr(0, i);
       }
     }
