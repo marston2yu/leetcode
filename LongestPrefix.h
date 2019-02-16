@@ -5,6 +5,7 @@
 #ifndef LEETCODE_LONGESTPREFIX_H
 #define LEETCODE_LONGESTPREFIX_H
 #include <string>
+#include <vector>
 using namespace std;
 string longestCommonPrefix(vector<string> &strs);
 #endif //LEETCODE_LONGESTPREFIX_H
