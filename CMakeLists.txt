@@ -24,3 +24,9 @@ target_link_libraries(LongestPrefixTest Catch2::Catch2 ${EXTRA_LIBS})
 include(CTest)
 include(Catch)
 catch_discover_tests(LongestPrefixTest)
+
+# test longest substring without repeating.
+add_executable(LongestSubstringWithoutRepeatingTest LongestSubstringWithoutRepeatingTest.cpp
+        LongestSubstringWithoutRepeating.cpp)
+target_link_libraries(LongestSubstringWithoutRepeatingTest Catch2::Catch2)
+catch_discover_tests(LongestSubstringWithoutRepeatingTest)

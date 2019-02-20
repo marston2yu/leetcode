@@ -10,6 +10,7 @@ My solution to leetcode problems.
 
 | No.  | Problem               | Source files          | Notes |
 | ---- | --------------------- | --------------------- | ----- |
+|3|Longest Substring Without Repeating Characters|LongestSubstringWithoutRepeating.h<br />LongestSubstringWithoutRepeating.cpp<br />LongestSubstringWithoutRepeatingTest.cpp||
 | 14   | Longest Common Prefix | LongestCommonPrefix.h<br/>LongestCommonPrefix.cpp<br/>DataStructures/Trie.h<br/>DataStructures/Trie.cpp<br/>LongestCommonPrefixTest.cpp | Further problem: find a longest common prefix between a string and a collection of string. |
 
 
