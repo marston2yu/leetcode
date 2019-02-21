@@ -30,3 +30,9 @@ add_executable(LongestSubstringWithoutRepeatingTest LongestSubstringWithoutRepea
         LongestSubstringWithoutRepeating.cpp)
 target_link_libraries(LongestSubstringWithoutRepeatingTest Catch2::Catch2)
 catch_discover_tests(LongestSubstringWithoutRepeatingTest)
+
+# test longest palindromic substring.
+add_executable(LongestPalindromicSubstringTest LongestPalindromicSubstringTest.cpp
+        LongestPalindromicSubstring.cpp)
+target_link_libraries(LongestPalindromicSubstringTest Catch2::Catch2)
+catch_discover_tests(LongestPalindromicSubstringTest)
