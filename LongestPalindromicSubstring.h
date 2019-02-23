@@ -8,4 +8,6 @@
 using namespace std;
 string dynamicProgrammingSolution(string s);
 
+string manacher(string s);
+
 #endif //LEETCODE_LONGESTPALINDROMICSUBSTRING_H

@@ -54,3 +54,59 @@ string dynamicProgrammingSolution(string s) {
   int max_left = table[max_length - 1][0];
   return s.substr(max_left, max_length);
 }
+
+string manacher(string s) {
+  // Manacher's algorithm for longest palindrome string problem.
+  // insert '#' character to the original string which turns all even palindromes to odd palindromes.
+  string sp;
+  for (char i : s) {
+    sp.push_back('#');
+    sp.push_back(i);
+  }
+  sp.push_back('#');
+
+  vector<int> p(sp.length()); // length of palindrome centered at 'i' in 'sp' string.
+  int id = 0; // index of the center of the rightmost palindrome.
+  int edge = 0; // right edge of the right most palindrome.
+  for (int i = 0; i < sp.length(); i++) {
+    // update edge and calculate distance to edge.
+    edge = id + p[id];
+    int distToEdge = edge - i;
+    int pLeft = 2*id - i;
+
+    // p[i] = edge > i ? (p[pLeft] < distToEdge ? p[pLeft] : distToEdge) : 1;
+    if (distToEdge > 0) {
+      if (p[pLeft] < distToEdge)
+        // case 1
+        p[i] = p[pLeft];
+      else if (p[pLeft] > distToEdge)
+        // case 2
+        p[i] = distToEdge;
+      else {
+        // case 3
+        p[i] = distToEdge; // p[i] is at least distance to edge because of symmetry.
+        while (i - p[i] - 1 >= 0 && sp[i - p[i] - 1]==sp[i + p[i] + 1])
+          p[i]++; // extend palindrome until it reaches max length.
+      }
+    } else {
+      // no mirror exists, so we have to extend palindrome from 1;
+      p[i] = 0;
+      while (i - p[i] - 1 >= 0 && sp[i - p[i] - 1]==sp[i + p[i] + 1]) p[i]++;
+    }
+
+    // update id.
+    id = (i + p[i]) > edge ? i : id;
+  }
+
+  // search p[] for palindrome with max length and its center index.
+  int center = 0;
+  int length = 0;
+  for (int i = 0; i < sp.length(); i++) {
+    if (p[i] > length) {
+      length = p[i];
+      center = i/2;
+    }
+  }
+  int left = center - length/2;
+  return s.substr(left, length);
+}

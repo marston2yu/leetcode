@@ -15,3 +15,12 @@ TEST_CASE("Test dynamic programming solution.") {
   REQUIRE(dynamicProgrammingSolution("babad")=="bab");
   REQUIRE(dynamicProgrammingSolution("cbbd")=="bb");
 }
+
+TEST_CASE("Test Manacher's algorithm.") {
+  REQUIRE(manacher("ababababa")=="ababababa");
+  REQUIRE(manacher("abcba")=="abcba");
+  REQUIRE(manacher("bananas")=="anana");
+  REQUIRE(manacher("")=="");
+  REQUIRE(manacher("babad")=="bab");
+  REQUIRE(manacher("cbbd")=="bb");
+}
