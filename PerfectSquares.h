@@ -6,5 +6,6 @@
 #define LEETCODE_PERFECTSQUARES_H
 
 int dynamicProgrammingSolution(int n);
+int mathematicalApproach(int n);
 
 #endif //LEETCODE_PERFECTSQUARES_H
