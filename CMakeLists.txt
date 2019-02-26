@@ -36,3 +36,9 @@ add_executable(LongestPalindromicSubstringTest LongestPalindromicSubstringTest.c
         LongestPalindromicSubstring.cpp)
 target_link_libraries(LongestPalindromicSubstringTest Catch2::Catch2)
 catch_discover_tests(LongestPalindromicSubstringTest)
+
+# test perfect squares.
+add_executable(PerfectSquaresTest PerfectSquaresTest.cpp
+        PerfectSquares.cpp)
+target_link_libraries(PerfectSquaresTest Catch2::Catch2)
+catch_discover_tests(PerfectSquaresTest)
