@@ -42,3 +42,9 @@ add_executable(PerfectSquaresTest PerfectSquaresTest.cpp
         PerfectSquares.cpp)
 target_link_libraries(PerfectSquaresTest Catch2::Catch2)
 catch_discover_tests(PerfectSquaresTest)
+
+# test queue reconstrunction by height.
+add_executable(QueueReconstructionbyHeightTest QueueReconstrunctionbyHeightTest.cpp
+        QueueReconstructionbyHeight.cpp)
+target_link_libraries(QueueReconstructionbyHeightTest Catch2::Catch2)
+catch_discover_tests(QueueReconstructionbyHeightTest)
