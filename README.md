@@ -15,5 +15,5 @@ My solution to leetcode problems.
 | 14   | Longest Common Prefix | LongestCommonPrefix.h<br/>LongestCommonPrefix.cpp<br/>DataStructures/Trie.h<br/>DataStructures/Trie.cpp<br/>LongestCommonPrefixTest.cpp | Further problem: find a longest common prefix between a string and a collection of string. |
 |279|Perfect Squares|PerfectSquares.h<br/>PerfectSquares.cpp<br/>PerfectSquaresTest.cpp|DP solution and solution based on mathematical theorems.|
 |406|Queue Reconstruction by Height|QueueReconstructionbyHeight.h<br/>QueueReconstructionbyHeight.cpp<br/>QueueReconstructionbyHeightTest.cpp||
-|142|Linked List Cycle II|LinkedListCycleII.h<br/>LinkedListCycleII.cpp|Floyd's algorithm.|
+|142|Linked List Cycle II|LinkedListCycleII.h<br/>LinkedListCycleII.cpp|[Floyd's algorithm](https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_Tortoise_and_Hare).<br/>[Brent's algorithm](http://www.siafoo.net/algorithm/11).|
 

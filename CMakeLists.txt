@@ -44,7 +44,13 @@ target_link_libraries(PerfectSquaresTest Catch2::Catch2)
 catch_discover_tests(PerfectSquaresTest)
 
 # test queue reconstrunction by height.
-add_executable(QueueReconstructionbyHeightTest QueueReconstrunctionbyHeightTest.cpp
+add_executable(QueueReconstructionbyHeightTest QueueReconstructionbyHeightTest.cpp
         QueueReconstructionbyHeight.cpp)
 target_link_libraries(QueueReconstructionbyHeightTest Catch2::Catch2)
 catch_discover_tests(QueueReconstructionbyHeightTest)
+
+# test linked list cycle II.
+add_executable(LinkedListCycleIITest LinkedListCycleIITest.cpp
+        LinkedListCycleII.cpp)
+target_link_libraries(LinkedListCycleIITest Catch2::Catch2)
+catch_discover_tests(LinkedListCycleIITest)

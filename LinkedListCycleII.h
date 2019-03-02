@@ -5,7 +5,7 @@
 #ifndef LEETCODE_LINKEDLISTCYCLEII_H
 #define LEETCODE_LINKEDLISTCYCLEII_H
 
-
+#include <cstddef>
 //Definition for singly-linked list.
 struct ListNode {
     int val;
@@ -16,4 +16,5 @@ struct ListNode {
 
 ListNode *floydAlgorithm(ListNode *head);
 
+ListNode *brentAlgorithm(ListNode *head);
 #endif //LEETCODE_LINKEDLISTCYCLEII_H
