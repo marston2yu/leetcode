@@ -54,3 +54,9 @@ add_executable(LinkedListCycleIITest LinkedListCycleIITest.cpp
         LinkedListCycleII.cpp)
 target_link_libraries(LinkedListCycleIITest Catch2::Catch2)
 catch_discover_tests(LinkedListCycleIITest)
+
+# test edit distance algorithm.
+add_executable(EditDistance EditDistanceTest.cpp
+        EditDistance.cpp)
+target_link_libraries(EditDistance Catch2::Catch2)
+catch_discover_tests(EditDistance)
