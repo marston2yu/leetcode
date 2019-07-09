@@ -56,7 +56,13 @@ target_link_libraries(LinkedListCycleIITest Catch2::Catch2)
 catch_discover_tests(LinkedListCycleIITest)
 
 # test edit distance algorithm.
-add_executable(EditDistance EditDistanceTest.cpp
+add_executable(EditDistanceTest EditDistanceTest.cpp
         EditDistance.cpp)
-target_link_libraries(EditDistance Catch2::Catch2)
-catch_discover_tests(EditDistance)
+target_link_libraries(EditDistanceTest Catch2::Catch2)
+catch_discover_tests(EditDistanceTest)
+
+# test unique paths II algorithm.
+add_executable(UniquePathsIITest UniquePathsIITest.cpp
+        UniquePathsII.cpp)
+target_link_libraries(UniquePathsIITest Catch2::Catch2)
+catch_discover_tests(UniquePathsIITest)
