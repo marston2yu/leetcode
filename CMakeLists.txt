@@ -66,3 +66,9 @@ add_executable(UniquePathsIITest UniquePathsIITest.cpp
         UniquePathsII.cpp)
 target_link_libraries(UniquePathsIITest Catch2::Catch2)
 catch_discover_tests(UniquePathsIITest)
+
+# test distinct subsequences algorithm.
+add_executable(DistinctSubsequencesTest DistinctSubsequencesTest.cpp
+        DistinctSubsequences.cpp)
+target_link_libraries(DistinctSubsequencesTest Catch2::Catch2)
+catch_discover_tests(DistinctSubsequencesTest)
