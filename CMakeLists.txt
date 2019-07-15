@@ -72,3 +72,9 @@ add_executable(MergeIntervalsTest MergeIntervalsTest.cpp
         MergeIntervals.cpp)
 target_link_libraries(MergeIntervalsTest Catch2::Catch2)
 catch_discover_tests(MergeIntervalsTest)
+
+# test distinct subsequences algorithm.
+add_executable(DistinctSubsequencesTest DistinctSubsequencesTest.cpp
+        DistinctSubsequences.cpp)
+target_link_libraries(DistinctSubsequencesTest Catch2::Catch2)
+catch_discover_tests(DistinctSubsequencesTest)
