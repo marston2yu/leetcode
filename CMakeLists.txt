@@ -66,3 +66,9 @@ add_executable(UniquePathsIITest UniquePathsIITest.cpp
         UniquePathsII.cpp)
 target_link_libraries(UniquePathsIITest Catch2::Catch2)
 catch_discover_tests(UniquePathsIITest)
+
+# test merge intervals algorithm.
+add_executable(MergeIntervalsTest MergeIntervalsTest.cpp
+        MergeIntervals.cpp)
+target_link_libraries(MergeIntervalsTest Catch2::Catch2)
+catch_discover_tests(MergeIntervalsTest)
