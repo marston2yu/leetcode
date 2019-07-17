@@ -78,3 +78,9 @@ add_executable(DistinctSubsequencesTest DistinctSubsequencesTest.cpp
         DistinctSubsequences.cpp)
 target_link_libraries(DistinctSubsequencesTest Catch2::Catch2)
 catch_discover_tests(DistinctSubsequencesTest)
+
+# test median of two sorted arrays algorithm.
+add_executable(MedianOfTwoSortedArraysTest MedianOfTwoSortedArraysTest.cpp
+        MedianOfTwoSortedArrays.cpp)
+target_link_libraries(MedianOfTwoSortedArraysTest Catch2::Catch2)
+catch_discover_tests(MedianOfTwoSortedArraysTest)
