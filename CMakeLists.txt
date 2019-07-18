@@ -84,3 +84,9 @@ add_executable(MedianOfTwoSortedArraysTest MedianOfTwoSortedArraysTest.cpp
         MedianOfTwoSortedArrays.cpp)
 target_link_libraries(MedianOfTwoSortedArraysTest Catch2::Catch2)
 catch_discover_tests(MedianOfTwoSortedArraysTest)
+
+# test largest rectangle in histogram solution.
+add_executable(LargestRectangleInHistogramTest LargestRectangleInHistogramTest.cpp
+        LargestRectangleInHistogram.cpp)
+target_link_libraries(LargestRectangleInHistogramTest Catch2::Catch2)
+catch_discover_tests(LargestRectangleInHistogramTest)
