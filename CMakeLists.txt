@@ -90,3 +90,9 @@ add_executable(LargestRectangleInHistogramTest LargestRectangleInHistogramTest.c
         LargestRectangleInHistogram.cpp)
 target_link_libraries(LargestRectangleInHistogramTest Catch2::Catch2)
 catch_discover_tests(LargestRectangleInHistogramTest)
+
+# test stone game solution.
+add_executable(StoneGameTest StoneGameTest.cpp
+        StoneGame.cpp)
+target_link_libraries(StoneGameTest Catch2::Catch2)
+catch_discover_tests(StoneGameTest)
