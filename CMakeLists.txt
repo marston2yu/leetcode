@@ -84,3 +84,15 @@ add_executable(MedianOfTwoSortedArraysTest MedianOfTwoSortedArraysTest.cpp
         MedianOfTwoSortedArrays.cpp)
 target_link_libraries(MedianOfTwoSortedArraysTest Catch2::Catch2)
 catch_discover_tests(MedianOfTwoSortedArraysTest)
+
+# test largest rectangle in histogram solution.
+add_executable(LargestRectangleInHistogramTest LargestRectangleInHistogramTest.cpp
+        LargestRectangleInHistogram.cpp)
+target_link_libraries(LargestRectangleInHistogramTest Catch2::Catch2)
+catch_discover_tests(LargestRectangleInHistogramTest)
+
+# test stone game solution.
+add_executable(StoneGameTest StoneGameTest.cpp
+        StoneGame.cpp)
+target_link_libraries(StoneGameTest Catch2::Catch2)
+catch_discover_tests(StoneGameTest)
