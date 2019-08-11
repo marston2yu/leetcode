@@ -96,3 +96,9 @@ add_executable(StoneGameTest StoneGameTest.cpp
         StoneGame.cpp)
 target_link_libraries(StoneGameTest Catch2::Catch2)
 catch_discover_tests(StoneGameTest)
+
+# test reverse linked list.
+add_executable(ReverseLinkedListTest ReverseLinkedListTest.cpp
+        ReverseLinkedList.cpp)
+target_link_libraries(ReverseLinkedListTest Catch2::Catch2 ${EXTRA_LIBS})
+catch_discover_tests(ReverseLinkedListTest)

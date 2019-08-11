@@ -5,4 +5,5 @@
 #ifndef LEETCODE_DATASTRUCTURES_H
 #define LEETCODE_DATASTRUCTURES_H
 #include "Trie.h"
+#include "ListNode.h"
 #endif //LEETCODE_DATASTRUCTURES_H
