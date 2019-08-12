@@ -48,3 +48,48 @@ ListNode *reverseBetween(ListNode *head, int m, int n) {
   if (m == 1) head = nNode;  // Correct head node because it may be swapped.
   return head;
 }
+
+ListNode *reverseBetweenIterative(ListNode *head, int m, int n) {
+
+  if (!head) return nullptr;  // Empty list.
+
+  ListNode *prev = nullptr;
+  ListNode *cur = head;
+  ListNode *after = cur->next;
+  ListNode *con = nullptr;  // Node before reversed part.
+  ListNode *tail = nullptr;  // Tail of the reversed part.
+
+  ListNode *nodeIter = head;
+  for (int i = 1; i <= n; i++) {  // Iterate n times so that cur point to [n+1] node.
+    if (i < m) {
+      if (i == m - 1) {  // Find the node [m-1].
+        prev = nodeIter;
+        con = nodeIter;
+      }
+      nodeIter = nodeIter->next;  // The iterator is useful only before finding the [m] node.
+      continue;
+    }
+    if (i == m) {  // Fine the node [m].
+      cur = nodeIter;
+      tail = nodeIter;
+    }
+    after = cur->next;
+    cur->next = prev;
+    prev = cur;
+    cur = after;
+  }
+
+  // After iteration, prev is tail of the to-be-reversed part, i.e, head of the reversed part.
+  // Cur is the node after reversed part.
+  tail->next = cur;
+
+  // When m is 1, con is nullptr.
+  // In this circumstance, we do not need to set con's next, but we have to reset head.
+  if (!con) {
+    head = prev;
+  } else {
+    con->next = prev;
+  }
+
+  return head;
+}

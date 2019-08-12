@@ -6,5 +6,6 @@
 
 ListNode *reverseBetween(ListNode *head, int m, int n);
 
+ListNode *reverseBetweenIterative(ListNode *head, int m, int n);
 
 #endif //LEETCODE_REVERSELINKEDLIST_H
