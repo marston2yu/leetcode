@@ -43,3 +43,14 @@ TEST_CASE("Test {1}") {{
   f.write(template)
   
 
+with open("CMakeLists.txt", 'a') as f:
+  testname = ' '.join(re.findall('[A-Z][^A-Z]*', args.filename))
+  template = '''
+# test {0}.
+add_executable({1}Test {1}Test.cpp
+        {1}.cpp)
+target_link_libraries({1}Test Catch2::Catch2)
+catch_discover_tests({1}Test)
+'''.format(testname, args.filename)
+  f.write(template)
+
