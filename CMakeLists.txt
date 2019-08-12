@@ -102,3 +102,9 @@ add_executable(ReverseLinkedListTest ReverseLinkedListTest.cpp
         ReverseLinkedList.cpp)
 target_link_libraries(ReverseLinkedListTest Catch2::Catch2 ${EXTRA_LIBS})
 catch_discover_tests(ReverseLinkedListTest)
+
+# test Valid Stack Sequences.
+add_executable(ValidStackSequencesTest ValidStackSequencesTest.cpp
+        ValidStackSequences.cpp)
+target_link_libraries(ValidStackSequencesTest Catch2::Catch2)
+catch_discover_tests(ValidStackSequencesTest)
