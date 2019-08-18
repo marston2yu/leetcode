@@ -108,3 +108,9 @@ add_executable(ValidStackSequencesTest ValidStackSequencesTest.cpp
         ValidStackSequences.cpp)
 target_link_libraries(ValidStackSequencesTest Catch2::Catch2)
 catch_discover_tests(ValidStackSequencesTest)
+
+# test Partition Equal Subset Sum.
+add_executable(PartitionEqualSubsetSumTest PartitionEqualSubsetSumTest.cpp
+        PartitionEqualSubsetSum.cpp)
+target_link_libraries(PartitionEqualSubsetSumTest Catch2::Catch2)
+catch_discover_tests(PartitionEqualSubsetSumTest)
