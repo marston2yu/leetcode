@@ -114,3 +114,9 @@ add_executable(PartitionEqualSubsetSumTest PartitionEqualSubsetSumTest.cpp
         PartitionEqualSubsetSum.cpp)
 target_link_libraries(PartitionEqualSubsetSumTest Catch2::Catch2)
 catch_discover_tests(PartitionEqualSubsetSumTest)
+
+# test Partition To K Equal Sum Subsets.
+add_executable(PartitionToKEqualSumSubsetsTest PartitionToKEqualSumSubsetsTest.cpp
+        PartitionToKEqualSumSubsets.cpp)
+target_link_libraries(PartitionToKEqualSumSubsetsTest Catch2::Catch2)
+catch_discover_tests(PartitionToKEqualSumSubsetsTest)
