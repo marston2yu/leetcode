@@ -33,8 +33,8 @@ bool canPartitionKSubsets(vector<int>& nums, int k) {
   if (sum % k) return false;
   avg = sum / k;
 
-  // Sort is trivial?
-  // sort(nums.rbegin(), nums.rend());
+  // Sort can make the algorithm faster?
+  sort(nums.rbegin(), nums.rend());
 
   visited.resize(nums.size());
   return dfs(nums, k, 0, 0);
