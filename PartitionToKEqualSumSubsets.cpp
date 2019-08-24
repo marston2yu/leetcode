@@ -28,6 +28,10 @@ bool dfs(const vector<int>& nums, int k, int sum, int pos) {
   return false;  // All search failed.
 }
 
+/**
+ * @brief DFS solution(brute force method).
+ * 
+ */
 bool canPartitionKSubsets(vector<int>& nums, int k) {
   int sum = accumulate(nums.begin(), nums.end(), 0.0);
   if (sum % k) return false;
@@ -38,4 +42,45 @@ bool canPartitionKSubsets(vector<int>& nums, int k) {
 
   visited.resize(nums.size());
   return dfs(nums, k, 0, 0);
+}
+
+/**
+ * @brief Mask dynamic programming solution.
+ * 
+ */
+bool canPartitionKSubsetsDP(vector<int>& nums, int k) {
+  int sum = accumulate(nums.begin(), nums.end(), 0.0);
+  if (sum % k) return false;
+  int avg = sum / k;
+
+  sort(nums.begin(), nums.end());
+
+  int n = nums.size();
+  // DP array store whether a crossing occurs when adding up the subset specified by a mask.
+  // A crossing occurs when adding a new number, the total value bypass `m` groups' sum.
+  // For example, when average value of each group is `avg` and current sum is `m*avg-3` which indicate
+  // we need more value to form m groups. But when a new number 6 adding to sum, a crossing occurs from
+  // m groups to m+1 groups.
+  // ==> We say a subset is without crossing only when subset of this subset is without crossing.
+  // In fact, all numbers' sum equal to k*nums exactly. But what we have to figure out is whether a
+  // subset sum up to m * avg.
+  vector<int> dp(1 << n);     // 1 indicate no crossing occurs.
+  vector<int> total(1 << n);  // Sum of subset specified by mask.
+  dp[0] = 1;                  // Initial condition, {} is a subset without crossing.
+  for (int mask = 0; mask < dp.size(); mask++) {
+    if (dp[mask]) {  // Only when subset s is without crossing, subset + nums[j] can be a subset without crossing.
+      for (int j = 0; j < nums.size(); j++) {
+        int mask_next = mask | (1 << j);               // Mask of subset + nums[j].
+        if (mask != mask_next) {                       // Current subset should not contain nums[j].
+          if (nums[j] <= avg - (total[mask] % avg)) {  // Check whether crossing occur when adding nums[j].
+            dp[mask_next] = 1;
+            total[mask_next] = total[mask] + nums[j];
+          } else { // When adding a smaller number will trigger crossing, there is no need to check greater numbers.
+            break;
+          }
+        }
+      }
+    }
+  }
+  return dp[(1 << n) - 1];
 }

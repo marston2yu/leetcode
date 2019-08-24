@@ -3,4 +3,5 @@
 #include <vector>
 using namespace std;
 bool canPartitionKSubsets(vector<int>& nums, int k);
+bool canPartitionKSubsetsDP(vector<int>& nums, int k);
 #endif  //LEETCODE_PARTITIONTOKEQUALSUMSUBSETS_H

@@ -8,6 +8,9 @@ TEST_CASE("Test Partition To K Equal Sum Subsets") {
   int k2 = 7;
   vector<int> nums3{8, 2, 5, 3, 3};
   int k3 = 3;
+  REQUIRE(!canPartitionKSubsetsDP(nums3, k3));
+  REQUIRE(!canPartitionKSubsetsDP(nums2, k2));
+  REQUIRE(canPartitionKSubsetsDP(nums1, k1));
   REQUIRE(!canPartitionKSubsets(nums3, k3));
   REQUIRE(!canPartitionKSubsets(nums2, k2));
   REQUIRE(canPartitionKSubsets(nums1, k1));
