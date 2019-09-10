@@ -120,3 +120,9 @@ add_executable(PartitionToKEqualSumSubsetsTest PartitionToKEqualSumSubsetsTest.c
         PartitionToKEqualSumSubsets.cpp)
 target_link_libraries(PartitionToKEqualSumSubsetsTest Catch2::Catch2)
 catch_discover_tests(PartitionToKEqualSumSubsetsTest)
+
+# test Unique Binary Search Trees.
+add_executable(UniqueBinarySearchTreesTest UniqueBinarySearchTreesTest.cpp
+        UniqueBinarySearchTrees.cpp)
+target_link_libraries(UniqueBinarySearchTreesTest Catch2::Catch2)
+catch_discover_tests(UniqueBinarySearchTreesTest)
