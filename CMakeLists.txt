@@ -126,3 +126,9 @@ add_executable(UniqueBinarySearchTreesTest UniqueBinarySearchTreesTest.cpp
         UniqueBinarySearchTrees.cpp)
 target_link_libraries(UniqueBinarySearchTreesTest Catch2::Catch2)
 catch_discover_tests(UniqueBinarySearchTreesTest)
+
+# test Unique Binary Search Trees I I.
+add_executable(UniqueBinarySearchTreesIITest UniqueBinarySearchTreesIITest.cpp
+        UniqueBinarySearchTreesII.cpp)
+target_link_libraries(UniqueBinarySearchTreesIITest Catch2::Catch2)
+catch_discover_tests(UniqueBinarySearchTreesIITest)
