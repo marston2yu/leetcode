@@ -132,3 +132,9 @@ add_executable(UniqueBinarySearchTreesIITest UniqueBinarySearchTreesIITest.cpp
         UniqueBinarySearchTreesII.cpp)
 target_link_libraries(UniqueBinarySearchTreesIITest Catch2::Catch2)
 catch_discover_tests(UniqueBinarySearchTreesIITest)
+
+# test Triangle.
+add_executable(TriangleTest TriangleTest.cpp
+        Triangle.cpp)
+target_link_libraries(TriangleTest Catch2::Catch2)
+catch_discover_tests(TriangleTest)
