@@ -120,3 +120,9 @@ add_executable(PartitionToKEqualSumSubsetsTest PartitionToKEqualSumSubsetsTest.c
         PartitionToKEqualSumSubsets.cpp)
 target_link_libraries(PartitionToKEqualSumSubsetsTest Catch2::Catch2)
 catch_discover_tests(PartitionToKEqualSumSubsetsTest)
+
+# test Find The Shortest Superstring.
+add_executable(FindTheShortestSuperstringTest FindTheShortestSuperstringTest.cpp
+        FindTheShortestSuperstring.cpp)
+target_link_libraries(FindTheShortestSuperstringTest Catch2::Catch2)
+catch_discover_tests(FindTheShortestSuperstringTest)
