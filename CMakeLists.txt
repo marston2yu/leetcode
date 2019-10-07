@@ -126,3 +126,21 @@ add_executable(FindTheShortestSuperstringTest FindTheShortestSuperstringTest.cpp
         FindTheShortestSuperstring.cpp)
 target_link_libraries(FindTheShortestSuperstringTest Catch2::Catch2)
 catch_discover_tests(FindTheShortestSuperstringTest)
+
+# test Unique Binary Search Trees.
+add_executable(UniqueBinarySearchTreesTest UniqueBinarySearchTreesTest.cpp
+        UniqueBinarySearchTrees.cpp)
+target_link_libraries(UniqueBinarySearchTreesTest Catch2::Catch2)
+catch_discover_tests(UniqueBinarySearchTreesTest)
+
+# test Unique Binary Search Trees I I.
+add_executable(UniqueBinarySearchTreesIITest UniqueBinarySearchTreesIITest.cpp
+        UniqueBinarySearchTreesII.cpp)
+target_link_libraries(UniqueBinarySearchTreesIITest Catch2::Catch2)
+catch_discover_tests(UniqueBinarySearchTreesIITest)
+
+# test Triangle.
+add_executable(TriangleTest TriangleTest.cpp
+        Triangle.cpp)
+target_link_libraries(TriangleTest Catch2::Catch2)
+catch_discover_tests(TriangleTest)

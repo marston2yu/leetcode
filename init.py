@@ -24,6 +24,8 @@ if isfile(test_filename):
 with open(header_filename, 'w') as f:
   template = '''#ifndef LEETCODE_{0}_H
 #define LEETCODE_{0}_H
+#include <bits/stdc++.h>
+using namespace std;
 #endif //LEETCODE_{0}_H'''.format(args.filename.upper())
   f.write(template)
 
