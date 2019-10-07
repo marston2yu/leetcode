@@ -144,3 +144,9 @@ add_executable(TriangleTest TriangleTest.cpp
         Triangle.cpp)
 target_link_libraries(TriangleTest Catch2::Catch2)
 catch_discover_tests(TriangleTest)
+
+# test Reverse Nodes In K Group.
+add_executable(ReverseNodesInKGroupTest ReverseNodesInKGroupTest.cpp
+        ReverseNodesInKGroup.cpp)
+target_link_libraries(ReverseNodesInKGroupTest Catch2::Catch2 ${EXTRA_LIBS})
+catch_discover_tests(ReverseNodesInKGroupTest)
