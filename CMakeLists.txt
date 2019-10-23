@@ -150,3 +150,9 @@ add_executable(ReverseNodesInKGroupTest ReverseNodesInKGroupTest.cpp
         ReverseNodesInKGroup.cpp)
 target_link_libraries(ReverseNodesInKGroupTest Catch2::Catch2 ${EXTRA_LIBS})
 catch_discover_tests(ReverseNodesInKGroupTest)
+
+# test LRUCache.
+add_executable(LRUCacheTest LRUCacheTest.cpp
+        LRUCache.cpp)
+target_link_libraries(LRUCacheTest Catch2::Catch2)
+catch_discover_tests(LRUCacheTest)
