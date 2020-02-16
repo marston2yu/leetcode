@@ -156,3 +156,9 @@ add_executable(LRUCacheTest LRUCacheTest.cpp
         LRUCache.cpp)
 target_link_libraries(LRUCacheTest Catch2::Catch2)
 catch_discover_tests(LRUCacheTest)
+
+# test Word Break.
+add_executable(WordBreakTest WordBreakTest.cpp
+        WordBreak.cpp)
+target_link_libraries(WordBreakTest Catch2::Catch2)
+catch_discover_tests(WordBreakTest)
